@@ -1,0 +1,160 @@
+* {
+    font-family: 'Cairo', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    padding: 20px;
+  }
+
+  /* الكارد */
+  .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  .card input.text {
+    border: 2px solid #ffffffaa;
+    border-radius: 12px;
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+
+  .card input.text:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px #00d4ff88;
+  }
+
+  .card .rad {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .card .rad input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #00d4ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .card .rad input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #00d4ff;
+    border-radius: 50%;
+  }
+
+  .card .rad label {
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #ffffffcc;
+  }
+
+  .card button {
+    cursor: pointer;
+    border: 2px solid #00d4ff;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #00d4ff;
+    font-size: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .card button:hover {
+    background-color: #00d4ff;
+    color: #000;
+    box-shadow: 0 0 15px #00d4ff88;
+  }
+  .ad {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    }
+  /* MEDIA QUERY للشاشات الصغيرة */
+  @media screen and (max-width: 600px) {
+    body {
+      align-items: flex-start;
+      padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        max-width: 100%;
+        padding: 30px 20px;
+        min-height: calc(100vh - 100px);
+        justify-content: flex-start;
+      }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .card input.text {
+      font-size: 18px;
+      padding: 10px 12px;
+    }
+
+    .card .rad {
+      gap: 8px;
+    }
+
+    .card .rad label {
+      font-size: 16px;
+    }
+
+    .card button {
+      font-size: 18px;
+      padding: 12px;
+    }
+  }
